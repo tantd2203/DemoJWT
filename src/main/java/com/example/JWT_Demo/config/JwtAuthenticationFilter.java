@@ -19,7 +19,6 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Component
-@RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 	@Autowired
@@ -29,12 +28,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 	private UserDetailsService userDetailsService;
 
 	@Override
-	protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response,
-			@NonNull FilterChain filterChain) throws ServletException, IOException {
+	protected void doFilterInternal(@NonNull HttpServletRequest request,
+									@NonNull HttpServletResponse response,
+			                        @NonNull FilterChain filterChain) throws ServletException, IOException {
 		final String authHeader = request.getHeader("Authorization");
 		final String jwt;
 		final String userEmail;
-		if (authHeader == null || !authHeader.startsWith("bear")) {
+		if (authHeader == null || !authHeader.startsWith("Bearer ")) {
 			filterChain.doFilter(request, response);
 			return;
 		}

@@ -1,6 +1,5 @@
 package com.example.JWT_Demo.auth;
 
-import com.example.JWT_Demo.user.Role;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,5 +16,4 @@ public class RegisterRequest {
   private String lastname;
   private String email;
   private String password;
-  private Role role;
 }

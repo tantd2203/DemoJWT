@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 public class AuthenticationController {
 
 	
-	@Autowired
+	 @Autowired
 	  private  AuthenticationService service;
 
 	  @PostMapping("/register")
