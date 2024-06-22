@@ -1,4 +1,4 @@
-# Demo Project with Spring Boot
+# SECURITY-JWT-SPRINGBOOT
 
 This is a demo project showcasing the use of Spring Boot with various dependencies for building a web application. The project includes features such as Spring Data JPA, Spring Security, Spring Web, JSON Web Token (JWT) authentication, SpringDoc OpenAPI, PostgreSQL integration, and more.
 
